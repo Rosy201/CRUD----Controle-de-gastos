@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Login - Controle de gastos</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label>Email: </label><br/>
+            <input type="email" name="email" id="email" onchange="validateFildes()" placeholder="@gmail.com" />
+        </div>
+        <div>
+            <label> Senha: </label><br/>
+            <input type="password" name="password" />
+        </div>
+        <div>
+            <button type="button" class="clear"  id="recover-password-button">Recuperar senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" disabled="true">Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline">Registrar</button>
+        </div>
+    </form>
+</body>
+
+<link rel="stylesheet" href="index.css" />
+
+<script src="index.js"></script>
+
+</html>

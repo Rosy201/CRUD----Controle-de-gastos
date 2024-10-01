@@ -1,0 +1,39 @@
+body {
+    background: #1abc9c;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; /*vh é altura da janela de vizualização e 100 vai ficar no meio da tela*/
+}
+form {
+    width: 300px;
+}
+input {
+    border:none;
+}
+input, button { 
+    padding: 10px; /* adicionar espaçamento interno ao campo selecionado*/
+    margin-bottom: 10px;
+    width: -webkit-fill-available; /*valor preencha o espaco disponivel*/ 
+}
+button {
+    cursor: pointer;
+}
+button:active {
+    opacity: 10;  
+}
+.clear {
+    background: transparent;
+    border: none;
+    color: white;
+}
+.solid {
+    background: white;
+    border: none;
+    color: #1abc9c;
+}
+.outline {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
