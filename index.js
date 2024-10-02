@@ -1,8 +1,13 @@
 //validação dos campos
-function validateFildes(){
+function onChangeEmail() {
     toggleButtonDisable();
     toggleEmailErrors();
 }
+
+function onChangePassword() {
+    togglePasswordErrors();
+    toggleButtonDisable();
+} 
 
 function isEmailValid() {
     const email = document.getElementById("email").value;
@@ -29,7 +34,14 @@ function toggleEmailErrors() {
     }
 }
 
- 
+function togglePasswordErrors() {
+    const password = document.getElementById('password').value;
+    if (!password) {
+        document.getElementById('password-required-error').style.display = "none";
+    } else {
+        document.getElementById('password-required-error').style.display = "block";
+    }
+}
 
 function toggleButtonDisable() {
     const emailValid = isEmailValid();

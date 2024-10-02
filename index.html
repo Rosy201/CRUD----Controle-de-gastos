@@ -9,13 +9,13 @@
     <form>
         <div>
             <label>Email: </label><br/>
-            <input type="email" name="email" id="email" onchange="validateFildes()" placeholder="@gmail.com" />
+            <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="@gmail.com" />
             <div class="error" id="email-required-error">Email é obrigatorio</div>
             <div class="error" id="email-invalid-error">Email é invalido</div>
         </div>
         <div>
             <label> Senha: </label><br/>
-            <input type="password" name="password"  id="password" onchange="validateFildes()" placeholder="Senha"/>
+            <input type="password" name="password"  id="password" onchange="onChangePassword()" placeholder="Senha"/>
             <div class="error" id="password-required-error">Senha é obrigatoria</div>
         </div>
         <div>
