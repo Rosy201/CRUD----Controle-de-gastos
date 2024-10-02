@@ -10,10 +10,13 @@
         <div>
             <label>Email: </label><br/>
             <input type="email" name="email" id="email" onchange="validateFildes()" placeholder="@gmail.com" />
+            <div class="error">Email é obrigatorio</div>
+            <div class="error">Email é invalido</div>
         </div>
         <div>
             <label> Senha: </label><br/>
             <input type="password" name="password"  id="password" onchange="validateFildes()" placeholder="Senha"/>
+            <div class="error">Senha é obrigatoria</div>
         </div>
         <div>
             <button type="button" class="clear"  id="recover-password-button">Recuperar senha</button>

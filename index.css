@@ -40,3 +40,7 @@ button[disabled] {
     color: white;
     border: 1px solid white;
 }
+.error {
+    background: #a53c3c;
+    display:  none;
+}
