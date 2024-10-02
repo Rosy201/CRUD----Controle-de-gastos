@@ -9,6 +9,16 @@ function onChangePassword() {
     toggleButtonDisable();
 } 
 
+//navegar entre tela de login para home
+function login() {
+    window.location.href = "page/home/home.html";
+}
+
+//navegar entre tela de login para registrar
+function register() {
+    window.location.href = "page/register/register.html";
+}
+
 function isEmailValid() {
     const email = form.email().value;
     if (!email) {
