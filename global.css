@@ -14,10 +14,10 @@
     border: 1px solid white;
 }
 button:active {
-    opacity: 10;  
+    opacity: 0.1;  
 }
 button[disabled] {
-    opacity: 0.2;
+    opacity: 0.9;
 }
 .error {
     background: #a53c3c;

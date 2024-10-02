@@ -18,11 +18,11 @@ function isEmailValid() {
 }
 // alternar entre duas opções a parte do email(tipo interrupior liga/desliga)
 function toggleEmailErrors() {
-    const email = form.email.value;
+    const email = form.email().value;
     
-    form.emailRequiredError.style.display = email ? "none" : "block";
+    form.emailRequiredError().style.display = email ? "none" : "block";
 
-    form.emailInvalidError.style.display = validateEmail(email) ? "none" : "block";
+    form.emailInvalidError().style.display = validateEmail(email) ? "none" : "block";
 }
 
 function togglePasswordErrors() {
