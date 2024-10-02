@@ -59,7 +59,3 @@ const form = {
     passwordRequiredError: () => document.getElementById('password-required-error'),
     recoverPassword: () => document.getElementById('recover-password-button')
 }
-
-function validateEmail(email) {
-    return /\$+@\S+/.test(email);
-}
