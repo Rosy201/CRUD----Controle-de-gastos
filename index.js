@@ -1,10 +1,7 @@
 //validação dos campos
 function validateFildes(){
-    const emailValid = isEmailValid();
-    document.getElementById('recover-password-button').disabled = !emailValid;
-    
-    const passwordValid = isPasswordValid();
-    document.getElementById('login-butto').disabled = !emailValid || !isPasswordValid;
+    toggleButtonDisable();
+    toggleEmailErrors();
 }
 
 function isEmailValid() {
@@ -13,6 +10,33 @@ function isEmailValid() {
         return false;
     }
     return validateEmail(email);
+}
+// alternar entre duas opções a parte do email(tipo interrupior liga/desliga)
+function toggleEmailErrors() {
+    const email = document.getElementById("email").value;
+    if (!email) {
+        document.getElementById('email-required-error').style.display = "block";
+    } else {
+        document.getElementById('email-required-error').style.display = "none";
+
+    }
+
+    if(validateEmail(email)) {
+        document.getElementById('email-invalid-error').style.display = "none";
+    } else {
+        document.getElementById('email-invalid-error').style.display = "block";
+
+    }
+}
+
+ 
+
+function toggleButtonDisable() {
+    const emailValid = isEmailValid();
+    document.getElementById('recover-password-button').disabled = !emailValid;
+    
+    const passwordValid = isPasswordValid();
+    document.getElementById('login-butto').disabled = !emailValid || !isPasswordValid;
 }
 
 function isPasswordValid() {
