@@ -13,13 +13,13 @@
         </div>
         <div>
             <label> Senha: </label><br/>
-            <input type="password" name="password" />
+            <input type="password" name="password"  id="password" onchange="validateFildes()" placeholder="Senha"/>
         </div>
         <div>
             <button type="button" class="clear"  id="recover-password-button">Recuperar senha</button>
         </div>
         <div>
-            <button type="button" class="solid" disabled="true">Entrar</button>
+            <button type="button" class="solid"  id="login-button" disabled="true">Entrar</button>
         </div>
         <div>
             <button type="button" class="outline">Registrar</button>

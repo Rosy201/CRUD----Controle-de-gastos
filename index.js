@@ -1,15 +1,28 @@
+//validação dos campos
 function validateFildes(){
+    const emailValid = isEmailValid();
+    document.getElementById('recover-password-button').disabled = !emailValid;
+    
+    const passwordValid = isPasswordValid();
+    document.getElementById('login-butto').disabled = !emailValid || !isPasswordValid;
+}
+
+function isEmailValid() {
     const email = document.getElementById("email").value;
-    // verificar ser o email nao é vazio e se o email é valido
-    if (!email) { // se o email é vazio
-        document.getElementById('recover-password-button').disabled = true;
-    } else if (validateEmail(email)) { // se é valido
-        document.getElementById('recover-password-button').disabled = false;
-    } else { // se nao é valido 
-        document.getElementById('recover-password-button').disabled = true;
+    if (!email) {
+        return false;
     }
+    return validateEmail(email);
+}
+
+function isPasswordValid() {
+    const password = document.getElementById("password").value;
+    if (!password) {
+        return false;
+    }
+    return true;
+}
 
 function validateEmail(email) {
     return /\$+@\S+/.test(email);
-}
 }

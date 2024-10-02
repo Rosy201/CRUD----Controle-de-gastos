@@ -6,7 +6,7 @@ body {
     height: 100vh; /*vh é altura da janela de vizualização e 100 vai ficar no meio da tela*/
 }
 form {
-    width: 300px;
+    width: 300px; 
 }
 input {
     border:none;
@@ -21,6 +21,9 @@ button {
 }
 button:active {
     opacity: 10;  
+}
+button[disabled] {
+    opacity: 0.2;
 }
 .clear {
     background: transparent;
