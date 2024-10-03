@@ -17,10 +17,15 @@ function login() {
     ).then(response => {
         window.location.href = "pages/home/home.html"
     }).catch(error => {
-        console.log('error', error)
-    }); 
-    
+        alert(getErrorMessage(error));
+    });   
+}
 
+function getErrorMessage(error) {
+    if (error.code == "auth/invalid-credential") {
+        return "Usuário não encontrado";
+    }
+    return error.message;
 }
 
 //navegar entre tela de login para registrar
