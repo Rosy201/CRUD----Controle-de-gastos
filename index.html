@@ -54,15 +54,6 @@
     };
 
     firebase.initializeApp(firebaseConfig);
-
-    // teste de login
-    console.log('antes');
-    firebase.auth().signInWithEmailAndPassword("teste123@gmail.com", "123456").then(response => {
-        console.log('sucess', response)
-    }).catch(error => {
-        console.log('error', error)
-    });
-    console.log('depois');
 </script>
 
 </html>
