@@ -18,21 +18,34 @@ function login() {
         hideLoading();
         window.location.href = "pages/home/home.html"
     }).catch(error => {
-        hideLoading();
+        hideLoading(); 
         alert(getErrorMessage(error));
     });   
 }
 
 function getErrorMessage(error) {
     if (error.code == "auth/invalid-credential") {
-        return "Usuário não encontrado";
+        return "Usuário não encontrado ou senha errada";
     }
+
     return error.message;
 }
 
 //navegar entre tela de login para registrar
 function register() {
     window.location.href = "pages/register/register.html";
+}
+
+//recuperar senha
+function recoverPassword() {
+    showLoading();
+    firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+        hideLoading();
+        alert('email enviado com sucesso');
+    }).catch(error => {
+        hideLoading();
+        alert(getErrorMessage(error));
+    })
 }
 
 function isEmailValid() {
