@@ -43,3 +43,10 @@ button[disabled] {
     background: #a53c3c;
     display:  none;
 }
+.form-field {
+    margin-bottom: 10px;
+}
+input, button { 
+    padding: 10px; /* adicionar espaçamento interno ao campo selecionado*/
+    width: -webkit-fill-available; /*valor preencha o espaco disponivel*/ 
+}
