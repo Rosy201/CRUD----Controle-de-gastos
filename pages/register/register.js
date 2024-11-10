@@ -1,3 +1,10 @@
+//evento de quando o usuario está logado e então não precisar ficar fazendo o processo de login
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        window.location.href = "../home/home.html";
+    }
+})
+
 function onChangeEmail() {
 const email = form.email().value;
 form.emailRequiredError().style.display = email ? "none" : "block";

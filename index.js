@@ -1,3 +1,10 @@
+//evento de quando o usuario está logado e então não precisar ficar fazendo o processo de login
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        window.location.href = "pages/home/home.html";
+    }
+})
+
 //habilitação dos campos
 function onChangeEmail() {
     toggleButtonDisable();
