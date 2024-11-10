@@ -1,12 +1,10 @@
 body {
     height: 100vh; /*vh é altura da janela de vizualização e 100 vai ficar no meio da tela*/
 }
-form {
-    width: 300px; 
+
+header {
+    text-align: right;
 }
-input {
-    border:none;
-}
-button {
-    margin-bottom: 10px;
+header button {
+    width: auto;
 }
