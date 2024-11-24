@@ -1,9 +1,9 @@
-//evento de quando o usuario está logado e então não precisar ficar fazendo o processo de login
-firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-        window.location.href = "../home/home.html";
-    }
-})
+// //evento de quando o usuario está logado e então não precisar ficar fazendo o processo de login
+// firebase.auth().onAuthStateChanged(user => {
+//     if (user) {
+//         window.location.href = "../home/home.html";
+//     }
+// }) PARA RESOLVER
 
 function onChangeEmail() {
 const email = form.email().value;

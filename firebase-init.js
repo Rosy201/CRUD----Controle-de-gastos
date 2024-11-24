@@ -1,4 +1,4 @@
-    // Adicionando autenticação do FIREBASE no html
+    // Adicionando autenticação do FIREBASE
     const firebaseConfig = {
         apiKey: "AIzaSyASVnxTbNN8wjnmfSqPwHUIB-0Ok7E1tuY",
         authDomain: "controle-de-gastos-f3df0.firebaseapp.com",
