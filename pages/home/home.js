@@ -9,33 +9,41 @@ function logout() {
 findTransactions();
 
 function findTransactions() {
-    setTimeout(() => {
-        addtransactionsToScreen(fakeTransactions);
-    }, 1000)
+    firebase.firestore()
+    .collection('transactions')
+    .get()
+    .then(snapshot => {
+        const transactions = snapshot.docs.map(doc => doc.data());
+        addTransactionsToScreen(transactions);
+    })
 }
 
-function addtransactionsToScreen(transaction) {
-    const orderList = document.createElement('li');
-    li.classList.add(transaction.type);
+function addTransactionsToScreen(transactions) {
+    const orderList = document.getElementById('transactions');
 
-    const date = document.createElement('p');
-    date.innerHTML = formatDate(transaction.date);
-    li.appendChild(date);
+    transactions.forEach(transaction =>{
+        const li = document.createElement('li');
+        li.classList.add(transaction.type);
 
-    const money = document.createElement('p');
-    money.innerHTML = formatMoney(transaction.money);
-    li.appendChild(money);
+        const date = document.createElement('p');
+        date.innerHTML = formatDate(transaction.date);
+        li.appendChild(date);
 
-    const type = document.createElement('p');
-    type.innerHTML = transaction.transactionType;
-    li.appendChild(type);
+        const money = document.createElement('p');
+        money.innerHTML = formatMoney(transaction.money);
+        li.appendChild(money);
 
-    if (transaction.description) {
-        const description = document.createElement('p');
-        description.innerHTML = transaction.description;
-        li.description(description);
-    }
-    orderList.appendChild(li);
+        const type = document.createElement('p');
+        type.innerHTML = transaction.transactionType;
+        li.appendChild(type);
+
+        if (transaction.description) {
+            const description = document.createElement('p');
+            description.innerHTML = transaction.description;
+            li.description(description);
+        }
+        orderList.appendChild(li);
+    })
 }
 
 function formatDate(date) {
